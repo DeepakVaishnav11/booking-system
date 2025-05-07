@@ -7,7 +7,7 @@
 </head>
 <body>
     <h2>Welcome!</h2>
-    <p>Your OTP code is: <strong>{{data}}</strong></p>
+    <p>Your OTP code is: <strong>{{$data}}</strong></p>
     <p>Please enter this code to verify your email address.</p>
 </body>
 </html>

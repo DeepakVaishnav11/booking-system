@@ -33,7 +33,7 @@ class OtpMail extends Mailable
 
     public function build()
     {   
-        return $this->subject('Test Email from Laravel')
+        return $this->subject('Your OTP Code')
                     ->view('emails.test')
                     ->with('data', $this->otp);
     }

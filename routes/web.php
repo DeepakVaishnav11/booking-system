@@ -21,5 +21,3 @@ Route::middleware(['auth', 'verified'])->group(function () {
 
 // routes/web.php
 
-Route::get('verify-otp', [RegisterController::class, 'showOtpForm'])->name('verify.otp');
-Route::post('verify-otp', [RegisterController::class, 'verifyOtp'])->name('verify.otp.submit');

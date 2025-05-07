@@ -25,8 +25,8 @@ class BookingController extends Controller
             'booking_date' => 'required|date|after_or_equal:today',
             'booking_type' => 'required|in:Full Day,Half Day,Custom',
             'booking_slot' => 'nullable|required_if:booking_type,Half Day|in:First Half,Second Half',
-            'from_time' => 'nullable|required_if:booking_type,Custom|date_format:HH:mm:ss',
-            'to_time' => 'nullable|required_if:booking_type,Custom|date_format:HH:mm:ss|after:from_time',
+            'from_time' => 'nullable|required_if:booking_type,Custom',
+            'to_time' => 'nullable|required_if:booking_type,Custom|after:from_time',
         ]);
 
 

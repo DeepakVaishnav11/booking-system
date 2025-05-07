@@ -70,19 +70,16 @@ class RegisterController extends Controller
      */
     protected function create(array $data)
     {
-        $otp = $this->generateOTP() ?? 123456;
+        // $otp = $this->generateOTP() ?? 123456;
         // Mail::to($data['email'])->send(new OtpMail($otp));
-        return view('auth.otp-verification');
-        return redirect()->route('verify.otp');
-        // print_r($sent);die;
-        // return User::create([
-        //     'name' => $data['name'],
-        //     'email' => $data['email'],
-        //     'password' => Hash::make($data['password']),
-        // ]);
+        return User::create([
+            'name' => $data['name'],
+            'email' => $data['email'],
+            'password' => Hash::make($data['password']),
+        ]);
     }
 
-    public function showOtpForm(){
-        return view('auth.otp-verification');
-    }
+    // public function showOtpForm(){
+    //     return view('auth.otp-verification');
+    // }
 }
